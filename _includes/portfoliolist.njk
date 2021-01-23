@@ -1,0 +1,18 @@
+<ul>
+	{% for post in portfoliolist %}
+		<li>
+			<strong>
+				<a href="{{ post.url | url}}">
+					{{ post.data.title }}
+					{{ post.data.title2 }}
+					<img src="{{ post.data.featuredImage | url }}" alt="{{ post.data.featuredImage }}">
+				</a>
+			</strong>
+			-
+			<span>
+				{{ post.data.description}}
+			</span>
+
+		</li>
+	{% endfor %}
+</ul>
