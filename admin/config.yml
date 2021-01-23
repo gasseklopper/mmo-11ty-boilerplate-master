@@ -35,7 +35,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   # Our portfolio
   - name: "pages"
-    label: "Page"
+    label: "Pages"
     folder: "pages"
     create: false # Change to true to allow editors to create new pages
     slug: "{{slug}}"
