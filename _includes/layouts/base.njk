@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 	<html>
+
 		<head>
 			<meta charset='utf-8'>
 			<meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -9,7 +10,16 @@
 			<script src='main.js'></script>
 		</head>
 		<body>
-			<h1>eleventy blog sample</h1>
-			{{ content | safe }}
+			<header>
+				<em>
+					<a href="{{ '/' | url }}">{{ metadata.title }}</a>
+				</em>
+				{% include "components/nav.njk" %}
+			</header>
+			<main>
+				<h1>eleventy blog sample</h1>
+				{{ content | safe }}
+			</main>
+			{% include "components/footer.njk" %}
 		</body>
 	</html>
