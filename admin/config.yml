@@ -17,7 +17,7 @@ collections:
       - {label: "Title2", name: "title2", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "featuredImage", widget: "image"}
+      - {label: "Featured Image", name: "featuredImage", widget: "image",  required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   # Our portfolio
   - name: "portfolios" # Used in routes, e.g., /admin/collections/blog
@@ -33,7 +33,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "featuredImage", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
-  # Our portfolio
+  # Our pages
   - name: "pages"
     label: "Pages"
     folder: "pages"
