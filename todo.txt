@@ -1,0 +1,4 @@
+portfolio
+pages/blog#contact#about#
+webpack:https://dev.to/stowball/creating-a-production-ready-eleventy-project-with-webpack-babel-and-sass-35ep
+markdown it : https://www.11ty.dev/docs/languages/markdown/#there-are-extra-%3Cpre%3E-and-%3Ccode%3E-in-my-output
