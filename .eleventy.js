@@ -3,12 +3,30 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/images");
 	eleventyConfig.addPassthroughCopy("src/admin");
+	eleventyConfig.addPassthroughCopy("src/favicon.ico");
 	// Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
 	// Merge data instead of overriding
 	// https://www.11ty.dev/docs/data-deep-merge/
 	eleventyConfig.setDataDeepMerge(true);
+
+	/* Markdown Plugins */
+	let markdownIt = require("markdown-it");
+	let markdownItAnchor = require("markdown-it-anchor");
+	let options = {
+		html: true,
+		breaks: true,
+		linkify: true
+	};
+	let opts = {
+		permalink: false
+	};
+
+	eleventyConfig.setLibrary("md", markdownIt(options)
+		.use(markdownItAnchor, opts)
+	);
+
 
 	return {
 		templateFormats: ["md", "njk", "html", "liquid"],
