@@ -4,7 +4,7 @@ title: may first post
 title2: may 2 post
 description: the forst post from me wiith jamstack
 date: 2020-10-07
-featuredImage: src/images/uploads/ease-in-and-out-–-2.jpg
+featuredImage: src/images/uploads/easing-visualization-–-3.jpg
 ---
 
 
