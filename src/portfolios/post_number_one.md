@@ -1,5 +1,5 @@
 ---
-layout: post.njk
+layout: portfolio.njk
 title: may first post
 title2: may 2 post
 description: the forst post from me wiith jamstack
