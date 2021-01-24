@@ -1,6 +1,6 @@
 ---
-layout: layouts/post.njk
-title: may first post
+layout: post.njk
+title: may second post
 title2: may 2 post
 description: the forst post from me wiith jamstack
 date: 2020-10-07

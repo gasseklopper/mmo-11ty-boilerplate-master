@@ -14,12 +14,12 @@
 				<em>
 					<a href="{{ '/' | url }}">{{ metadata.title }}</a>
 				</em>
-				{% include "components/nav.njk" %}
+				{% include "nav.njk" %}
 			</header>
 			<main>
 				<h1>eleventy blog sample</h1>
 				{{ content | safe }}
 			</main>
-			{% include "components/footer.njk" %}
+			{% include "footer.njk" %}
 		</body>
 	</html>
