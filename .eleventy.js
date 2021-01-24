@@ -2,7 +2,7 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/images");
-	eleventyConfig.addPassthroughCopy("admin");
+	eleventyConfig.addPassthroughCopy("src/admin");
 	// Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
