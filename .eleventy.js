@@ -1,9 +1,23 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function (eleventyConfig) {
+	eleventyConfig.setBrowserSyncConfig({
+		open: 'external',
+		browser: "chrome"
+	});
+
 	eleventyConfig.addPassthroughCopy("src/images");
 	eleventyConfig.addPassthroughCopy("src/admin");
 	eleventyConfig.addPassthroughCopy("src/favicon.ico");
+
+	// Watch our compiled assets for changes
+	eleventyConfig.addWatchTarget('./src/assets/compiled-assets/main.css');
+	eleventyConfig.addWatchTarget('./src/assets/compiled-assets/main.js');
+	eleventyConfig.addWatchTarget('./src/assets/compiled-assets/vendor.js');
+
+	// Copy src/compiled-assets to /assets
+	eleventyConfig.addPassthroughCopy({ 'src/assets/compiled-assets': 'assets' });
+
 	// Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
 

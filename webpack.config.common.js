@@ -10,7 +10,7 @@ module.exports = {
 		// The global variable name any `exports` from `index.js` will be available at
 		library: 'SITE',
 		// Where webpack will compile the assets
-		path: path.resolve(__dirname, '_site/assets/compiled-assets'),
+		path: path.resolve(__dirname, 'src/assets/compiled-assets'),
 	},
 	module: {
 		rules: [
