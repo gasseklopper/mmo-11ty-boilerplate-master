@@ -4,3 +4,10 @@ html {
 	background: #cbe3f5;
 	background: blue;
   }
+
+  .example {
+    display: grid;
+    transition: all .5s;
+    user-select: none;
+    background: linear-gradient(to bottom, white, black);//test
+}

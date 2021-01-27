@@ -2,6 +2,7 @@
 const Fiber = require('fibers');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
 	// Our "entry" point
@@ -27,6 +28,9 @@ module.exports = {
 							url: false,
 						},
 					},
+					{
+						loader: 'postcss-loader',
+					  },
 					{
 						loader: 'sass-loader',
 						options: {
