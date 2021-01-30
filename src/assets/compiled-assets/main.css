@@ -2618,8 +2618,22 @@ a:focus {
   background-color: purple;
 }
 
+.headroom {
+  will-change: transform;
+  transition: transform 800ms ease-in-out;
+}
+
+.headroom--pinned {
+  transform: translateY(0%);
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
+
 .locomotive-images {
   background: #000;
+  padding-bottom: 10em;
 }
 
 .section {

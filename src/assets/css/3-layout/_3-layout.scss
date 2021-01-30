@@ -10,3 +10,15 @@
 @import "core_navigation";
 @import "core_footer-dark";
 @import "nav_image_hover";
+
+.headroom {
+    will-change: transform;
+	transition: transform 800ms ease-in-out;
+
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}

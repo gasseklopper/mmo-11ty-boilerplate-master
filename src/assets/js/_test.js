@@ -36,6 +36,15 @@ const init = (elem) => {
 		document.documentElement.setAttribute('data-direction', instance.direction)
 		document.documentElement.setAttribute('data-speed', instance.speed)
 		ScrollTrigger.update
+
+		// if (instance.direction == "up") {
+		// 	console.log("data-direction", instance.direction)
+		// }
+
+		// if (instance.direction == "down") {
+		// 	console.log("data-direction", instance.direction)
+		// }
+
 	});
 
 	locoScroll.on('call', (value, way, obj) => {
@@ -93,6 +102,30 @@ const init = (elem) => {
 		// markers: true
 	})
 
+
+	var siteHeader = document.querySelector('.headroom');
+	console.log('locomotive images init started', siteHeader)
+	var header_progress = 0;
+	var header_direction = 1;
+	ScrollTrigger.create({
+		trigger: ".main_content",
+		scroller: elem,
+		start: "top top",
+		onUpdate: self => {
+			console.log("progress:", self.progress.toFixed(3), "direction:", self.direction, "velocity", self.getVelocity());
+			header_progress = self.progress.toFixed(2);
+			header_direction = self.direction;
+
+			if (header_direction === 1) {
+				siteHeader.classList.remove("headroom--pinned");
+				siteHeader.classList.add("headroom--unpinned");
+			} else {
+				siteHeader.classList.remove("headroom--unpinned");
+				siteHeader.classList.add("headroom--pinned");
+			}
+			// siteHeader.className = newClassName;
+		}
+	});
 	//////////////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////
 
