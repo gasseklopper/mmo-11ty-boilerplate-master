@@ -1,0 +1,56 @@
+.link {
+	a {
+		position: relative;
+		line-height: 16px;
+		font-size: .9em;
+		text-decoration: none;
+		color: color('primary');
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__arrow {
+		margin: 0 $gutter 0 0;
+		a {
+			&:hover {
+				text-decoration: none;
+				&::after {
+					transition: translate, .5s;
+					transform: translate(7px, 0px);
+				}
+			}
+			&::after {
+				content: "";
+				right: -24px;
+				top: -1px;
+				width: 16px;
+				height: 16px;
+				background: url("../images/icons/dark_arrow.svg")0 0 no-repeat;
+				display: inline-block;
+				position: absolute;
+			}
+		}
+
+		&--left {
+			margin: 0 0 0 $gutter;
+			a {
+				&:hover {
+					&::after {
+						transform: rotate(180deg)  translate(7px, 0px);
+					}
+				}
+
+				&::after {
+					content: "";
+					transform: rotate(180deg);
+					left: -24px;
+				}
+			}
+		}//left end
+		&--right {
+			//default arrow styling
+		}
+	}//arrow end
+
+}//link end

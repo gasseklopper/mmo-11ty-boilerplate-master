@@ -1,10 +1,19 @@
-<nav>
-  {% set navPages = collections.all | eleventyNavigation %}
-  <ul>
-  {%- for entry in navPages %}
-    <li>
-      <a href="{{ entry.url | url }}"{% if entry.url == page.url %} data-current="current item"{% endif %}>{{ entry.title }}</a>
-    </li>
-  {%- endfor %}
-  </ul>
-</nav>
+<div class="navigation">
+  <div class="container container-xl">
+    <nav id="nav" class="navbar">
+      <div class="navbar__brand">
+        <a href="{{ '/' | url }}">{{ metadata.title }}</a>
+      </div>
+      <div class="navbar__links">
+        {% set navPages = collections.all | eleventyNavigation %}
+        <ul>
+        {%- for entry in navPages %}
+          <li>
+            <a href="{{ entry.url | url }}"{% if entry.url == page.url %} data-current="current item"{% endif %}>{{ entry.title }}</a>
+          </li>
+        {%- endfor %}
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>

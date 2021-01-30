@@ -1,0 +1,264 @@
+.button {
+  height: 3em;
+  width: 10em;
+  display: inline-block;
+  // margin: 0 0 $gutter/2;
+  // padding: .5em 1em;
+  line-height: 1em;
+  text-align: center;
+  // white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: background $duration $timing;
+  border: 0;
+  border-radius: 0;
+  // vertical-align: middle;
+
+  //   cursor: pointer;
+  //   display: inline-block;
+  //   min-height: 1em;
+  //   outline: none;
+  //   border: none;
+  //   vertical-align: baseline;
+  //   background: #E0E1E2 none;
+  //   color: rgba(0, 0, 0, 0.6);
+  //   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  // //   margin: 0em 0.25em 0em 0em;
+  //   padding: 0.78571429em 1.5em 0.78571429em;
+  //   text-transform: none;
+  //   text-shadow: none;
+  //   font-weight: bold;
+  //   line-height: 1em;
+  //   font-style: normal;
+  //   text-align: center;
+  //   text-decoration: none;
+  //   border-radius: 0.28571429rem;
+  //   -webkit-box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+  //   box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+  //   -webkit-user-select: none;
+  //   -moz-user-select: none;
+  //   -ms-user-select: none;
+  //   user-select: none;
+  //   -webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  //   transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  //   transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  //   transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  //   will-change: '';
+  //   -webkit-tap-highlight-color: transparent;
+
+  &:active {
+    transition: none;
+  }
+
+  @each $colorName, $color in $colors {
+    $colorFont: null;
+
+    @if lightness($color) <= 50% {
+      $colorFont: $light-color;
+    }
+    // @if lightness($color) > 50% { $colorFont: $dark-color; }
+
+    &--#{ $colorName } {
+      background: $color;
+      color: $colorFont;
+
+      &:hover {
+        background: lighten($color, 10%);
+      }
+
+      &:active {
+        background: darken($color, 10%);
+      }
+    }
+  }
+}
+
+/*-------------------
+       Animated
+--------------------*/
+
+.animated-button {
+  position: relative;
+  // overflow: hidden;
+  // padding-right: 0em !important;
+
+  z-index: 1;
+  // background-color: green;
+  &:hover,
+  :focus {
+    .animated-button__content--stageone {
+      left: auto;
+      right: 200%;
+    }
+    .animated-button__content--stagetwo {
+      left: auto;
+      right: 0%;
+    }
+  }
+
+  &__content {
+    will-change: transform, opacity;
+    transition: right 0.3s ease 0s;
+
+    &--stageone {
+      background-color: red;
+      position: relative;
+      // margin-right: 1.5em;
+
+      left: auto;
+      top: 50%;
+      right: 0%;
+    }
+
+    &--stagetwo {
+      background-color: blue;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: auto;
+      right: -100%;
+      // margin-top: -0.5em;
+    }
+  }
+}
+
+.animated-button-vertical {
+  position: relative;
+  // overflow: hidden;
+  // padding-right: 0em !important;
+
+  z-index: 1;
+  // background-color: green;
+  &:hover,
+  :focus {
+    .animated-button-vertical__content--stageone {
+      left: auto;
+      right: 200%;
+    }
+    .animated-button-vertical__content--stagetwo {
+      left: auto;
+      right: 0%;
+    }
+  }
+
+  &__content {
+    will-change: transform, opacity;
+
+    &--stageone {
+      background-color: yellow;
+      position: relative;
+      // margin-right: 1.5em;
+      transition: right 0.3s ease 0s;
+      left: auto;
+      right: 0%;
+    }
+
+    &--stagetwo {
+      background-color: salmon;
+      position: absolute;
+      width: 100%;
+      transition: right 0.3s ease 0s;
+      top: 50%;
+      left: auto;
+      right: -100%;
+      margin-top: -0.5em;
+    }
+  }
+}
+
+/* Horizontal */
+.animated.button .visible.animated__content,
+.animated.button .hidden.animated__content {
+  -webkit-transition: right 0.3s ease 0s;
+  transition: right 0.3s ease 0s;
+}
+.animated.button .visible.animated__content {
+  left: auto;
+  right: 0%;
+}
+.animated.button .hidden.animated__content {
+  top: 50%;
+  left: auto;
+  right: -100%;
+  margin-top: -0.5em;
+}
+.animated.button:focus .visible.animated__content,
+.animated.button:hover .visible.animated__content {
+  left: auto;
+  right: 200%;
+}
+.animated.button:focus .hidden.animated__content,
+.animated.button:hover .hidden.animated__content {
+  left: auto;
+  right: 0%;
+}
+
+/* Vertical */
+.vertical.animated.button .visible.animated__content,
+.vertical.animated.button .hidden.animated__content {
+  -webkit-transition: top 0.3s ease, -webkit-transform 0.3s ease;
+  transition: top 0.3s ease, -webkit-transform 0.3s ease;
+  transition: top 0.3s ease, transform 0.3s ease;
+  transition: top 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.vertical.animated.button .visible.animated__content {
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+  right: auto;
+}
+.vertical.animated.button .hidden.animated__content {
+  top: -50%;
+  left: 0%;
+  right: auto;
+}
+.vertical.animated.button:focus .visible.animated__content,
+.vertical.animated.button:hover .visible.animated__content {
+  -webkit-transform: translateY(200%);
+  transform: translateY(200%);
+  right: auto;
+}
+.vertical.animated.button:focus .hidden.animated__content,
+.vertical.animated.button:hover .hidden.animated__content {
+  top: 50%;
+  right: auto;
+}
+
+/* Fade */
+.fade.animated.button .visible.animated__content,
+.fade.animated.button .hidden.animated__content {
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease,
+    -webkit-transform 0.3s ease;
+}
+.fade.animated.button .visible.animated__content {
+  left: auto;
+  right: auto;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.fade.animated.button .hidden.animated__content {
+  opacity: 0;
+  left: 0%;
+  right: auto;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.fade.animated.button:focus .visible.animated__content,
+.fade.animated.button:hover .visible.animated__content {
+  left: auto;
+  right: auto;
+  opacity: 0;
+  -webkit-transform: scale(0.75);
+  transform: scale(0.75);
+}
+.fade.animated.button:focus .hidden.animated__content,
+.fade.animated.button:hover .hidden.animated__content {
+  left: 0%;
+  right: auto;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}

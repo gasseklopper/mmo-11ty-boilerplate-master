@@ -1,0 +1,18 @@
+.icon {
+  padding-left: $gutter/2;
+
+  &__symbol {
+    $size: 32px;
+
+    display: block;
+    width: $size;
+    height: $size;
+    // Dimm element to look more like the dark text
+    fill: rgba(0, 0, 0, 0.45);
+    transition: fill $duration $timing;
+  }
+
+  &:hover &__symbol {
+    fill: color("primary");
+  }
+}

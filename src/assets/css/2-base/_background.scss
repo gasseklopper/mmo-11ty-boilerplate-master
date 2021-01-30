@@ -1,0 +1,17 @@
+.background {
+	@each $colorName, $color in $colors {
+
+		$colorFont: null;
+
+		@if lightness($color) <= 46% { $colorFont: $light-color; }
+		@if lightness($color) > 44% { $colorFont: black; }
+
+		&-#{ $colorName } {
+
+			background-color: $color;
+			color: $colorFont;
+		}
+
+	}
+
+}

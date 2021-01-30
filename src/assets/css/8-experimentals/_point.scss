@@ -1,0 +1,93 @@
+@keyframes point__outer {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	60% {
+		opacity: 1;
+	}
+	85% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes point__inner {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	10% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	70% {
+		opacity: .6;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.point {
+
+	$size: 18px;
+
+	position: absolute;
+	top: var(--y);
+	left: var(--x);
+	width: $size;
+	height: $size;
+	margin: $size/-2 0 0 $size/-2;
+	z-index: 1;
+
+	@media (hover: none) {
+		display: none;
+	}
+
+	&__inner {
+		width: 100%;
+		height: 100%;
+		background: currentcolor;
+		border-radius: 100%;
+	}
+
+	&__inner::before,
+	&__inner::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border-radius: inherit;
+		animation: 2.4s ease-out infinite;
+		animation-delay: var(--delay, 0);
+		animation-fill-mode: both;
+	}
+
+	&__inner::before {
+		$size: 48px;
+
+		top: calc(50% - #{ $size/2 });
+		left: calc(50% - #{ $size/2 });
+		width: $size;
+		height: $size;
+		border: 1px solid currentcolor;
+		z-index: -1;
+		animation-name: point__outer;
+	}
+
+	&__inner::after {
+		$size: 38px;
+
+		top: calc(50% - #{ $size/2 });
+		left: calc(50% - #{ $size/2 });
+		width: $size;
+		height: $size;
+		background: currentcolor;
+		z-index: -1;
+		animation-name: point__inner;
+	}
+
+}

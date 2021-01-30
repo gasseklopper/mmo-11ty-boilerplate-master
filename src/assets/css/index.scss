@@ -1,4 +1,43 @@
-@import "_test";
+// imports -------------------------------------------------------------- //
+@import "../../../node_modules/normalize.css/normalize";
+@import "../../../node_modules/locomotive-scroll/dist/locomotive-scroll";
+// grid -------------------------------------------------------------- //
+@import 'grid/main.scss';
+// @import 'test/main.scss';
+// Boiler Plate ------------------------------------------------------ //
+@import "2-base/functions";
+@import "00-vars/00-vars";
+@import "2-base/mixins";
+@import "2-base/placeholders";
+
+// // Base Styling  ------------------------------------------------------ //
+@import "2-base/2-base";
+
+// // Base layout  ------------------------------------------------------ //
+@import "3-layout/3-layout";
+
+// Base modules  ------------------------------------------------------ //
+@import "4-modules/4-modules";
+
+// Base components  ------------------------------------------------------ //
+@import "5-components/5-components";
+
+// Base templates  ------------------------------------------------------ //
+@import "6-templates/6-templates";
+
+// Base utilities  ------------------------------------------------------ //
+@import "7-utilities/7-utilities";
+
+// Base experimentals  ------------------------------------------------------ //
+@import "8-experimentals/8-experimentals";
+
+// Base customize  ------------------------------------------------------ //
+@import "9-customize/9-customize";
+
+
+
+
+
 html {
 	font-family: sans-serif;
 	background: #cbe3f5;

@@ -12,13 +12,9 @@
 		</head>
 		<body>
 			<header>
-				<em>
-					<a href="{{ '/' | url }}">{{ metadata.title }}</a>
-				</em>
 				{% include "nav.njk" %}
 			</header>
-			<main>
-				<h1>eleventy blog sample</h1>
+			<main class="main_content">
 				{{ content | safe }}
 			</main>
 			{% include "footer.njk" %}

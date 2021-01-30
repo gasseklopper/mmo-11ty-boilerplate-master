@@ -1,0 +1,38 @@
+.template_footer {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 40% 60%;
+	position: relative;
+
+	.image-wrapper {
+	  //   opacity: .4;
+	  height: 100%;
+	  width: 100%;
+
+	  img {
+		  height: 100%;
+		  width: 100%;
+		  object-fit: cover;
+	  }
+	}
+
+	.copy {
+	  font-size: 8vmin;
+	  height: 100vh;
+	  width: 100%;
+	  display: grid;
+	  align-content: center;
+
+
+	  blockquote {
+		margin: 0 32px;
+	  }
+	}
+
+	.copyright {
+		position: absolute;
+		bottom: 5%;
+		left: 50%;
+		font-size: 4vmin !important;
+	}
+}

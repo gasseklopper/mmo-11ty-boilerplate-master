@@ -1,0 +1,39 @@
+.teaser_img_gallery {
+	height: calc(300vh + 32px + 16px + 200px);
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-columns: 40% 60%;
+
+	.pinned-quote {
+	  //   background-color: red;
+		padding-top: 300px;
+	  //   padding-bottom: 200px;
+	  //   margin-bottom: 200px;
+	  //   margin-bottom: 13rem;
+	  //   z-index: 100;
+	}
+	blockquote {
+		font-size: 3vmin;
+		padding: 16px 16px 0 16px;
+
+		cite {
+			display: block;
+		}
+	}
+
+	.images-container {
+	  display: grid;
+	  grid-template-columns: repeat(2, 1fr);
+	  padding: 0 8px;
+	  gap: 8px;
+	  margin-top: 16px;
+
+	  img {
+		width: 100%;
+		max-height: 75vh;
+		height: 100%;
+		align-self: stretch;
+		object-fit: cover;
+	  }
+	}
+  }

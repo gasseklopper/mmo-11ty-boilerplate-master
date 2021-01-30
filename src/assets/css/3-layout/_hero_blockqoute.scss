@@ -1,0 +1,47 @@
+.hero_blockqoute {
+	// display: grid;
+	// grid-template-columns: 60% 40%;
+	height: 100vh;
+	padding-top: 10%;
+
+	&__rte {
+		// display: grid;
+		// align-content: center;
+		// padding: 0 1rem;
+		// height: 100%;
+
+		blockquote {
+			font-size: 4vmin;
+			font-weight: 300;
+			color: lightgray;
+
+			span {
+				background-color: red;
+				display: inline-block;
+				min-width: 0.3em;
+				font-size: 70px;
+				font-style: italic;
+				font-weight: 400;
+			}
+
+			cite {
+				font-weight: 300;
+				font-style: italic;
+				font-size: 7.5vmin;
+				display: block;
+				padding: 8px 0;
+			}
+		}
+	}
+
+	// &__image-wrapper {
+	// 	height: 100vh;
+	// 	width: 100%;
+
+	// 	img {
+	// 		height: 100%;
+	// 		width: 100%;
+	// 		object-fit: cover;
+	// 	}
+	// }
+}

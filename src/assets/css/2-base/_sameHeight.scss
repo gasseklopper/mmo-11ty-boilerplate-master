@@ -1,0 +1,76 @@
+.sameHeight {
+  display: flex;
+}
+
+.sameHeight {
+  display: flex;
+  img {
+    margin: 0;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: $gutter * 2;
+  }
+
+  &__content {
+    padding: $gutter/2;
+  }
+
+  &__bottom {
+    margin-top: auto;
+    //padding: $gutter/2;
+  }
+}
+//-----------------------
+
+.sameHeight2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: $gutter * 2;
+
+  &__content {
+    padding: 0 $gutter/2;
+    //flex-grow: 1;
+  }
+
+  &__bottom {
+    margin-top: auto;
+    padding: $gutter/2;
+  }
+}
+
+//----- prototype-----------------------------
+.sameHeight_prototype {
+  display: flex;
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    width: 100;
+    //margin-bottom: $gutter*2;
+    // rethink image
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    //padding: 0 $gutter/2;
+  }
+
+  &__bottom {
+    margin-top: auto;
+    //padding: $gutter/2;
+  }
+
+  //testing prototyp
+  &__half {
+    display: flex;
+    justify-content: space-between;
+  }
+}

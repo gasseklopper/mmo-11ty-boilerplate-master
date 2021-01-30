@@ -1,0 +1,61 @@
+// Colors ------------------------------------------------------ //
+$colors: (
+  "white": rgba(255, 255, 255, 1),
+  "black": rgba(0, 0, 0, 0.85),
+  "light": rgba(255, 255, 255, 0.8),
+  "dark": rgba(0, 0, 0, 0.6),
+  "grey": #eee,
+  "subtle": #f5f5f5,
+  "main": #2d84fc,
+);
+
+$shades: (
+  "white": color("white"),
+  "black": #444,
+  "light": #ddd,
+  "main": color("main"),
+);
+
+$gradients: (
+  "subtle": linear-gradient(color("subtle"), color("white")),
+  "shine": linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)),
+);
+
+// Shadows ----------------------------------------------------- //
+$shadowBig: 0 6px 12px rgba(0, 0, 0, 0.15);
+$shadowSmall: 0 2px 4px rgba(0, 0, 0, 0.15);
+
+// Sizes ------------------------------------------------------- //
+$gutter: 1.8rem;
+$maxWidth: 1350px;
+$headerHeight: 4em;
+$sectionPadding: $gutter * 4;
+$radiusSmall: 4px;
+$radiusBig: 6px;
+$iconSize: 90px;
+$gridMinWidth: 820px;
+
+// Breakpoints ------------------------------------------------- //
+$bpXXS: 480px;
+$bpXS: 640px;
+$bpS: 960px;
+$bpM: 1024px;
+$bpL: 1280px;
+$bpXL: 1366px;
+$bpXXL: 1920px;
+
+// Animations -------------------------------------------------- //
+$duration: 0.3s;
+$timing: cubic-bezier(0.51, 0.92, 0.24, 1);
+
+// Typography -------------------------------------------------- //
+$familyOpenSans: "Open Sans", sans-serif;
+$familyNotoMono: "Noto Mono", monospace;
+
+// Font -------------------------------------------------------- //
+$fontStack: normal 400 112.5%/1.7 $familyOpenSans;
+
+// basicGrid --------------------------------------------------- //
+$basicGrid__width: $maxWidth;
+$basicGrid__outer: $gutter/2;
+$basicGrid__gutter: $gutter;

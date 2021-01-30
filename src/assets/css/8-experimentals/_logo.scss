@@ -1,0 +1,17 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    $size: 32px;
+
+    width: $size;
+    height: $size;
+    border-radius: 100%;
+    background: color("dark-color");
+  }
+
+  &__name {
+    margin-left: $gutter/3;
+  }
+}

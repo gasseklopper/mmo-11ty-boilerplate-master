@@ -1,0 +1,16 @@
+html {
+  // Fill the whole browser. Necessary when the body is smaller than the browser,
+  // but wants to fill the whole page using min-height.
+  width: 100%;
+  height: 100%;
+
+  // Set the font-size in the root element as rem is relative to the document root
+  font: $fontStack;
+
+  @media (max-width: $bpS) {
+    // Must have a unit to be usable in calc()
+    --basicGrid-outer: 0px;
+    font-size: 87.5%;
+  }
+
+}
