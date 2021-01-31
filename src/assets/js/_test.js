@@ -107,6 +107,7 @@ const init = (elem) => {
 	console.log('locomotive images init started', siteHeader)
 	var header_progress = 0;
 	var header_direction = 1;
+
 	ScrollTrigger.create({
 		trigger: ".main_content",
 		scroller: elem,
