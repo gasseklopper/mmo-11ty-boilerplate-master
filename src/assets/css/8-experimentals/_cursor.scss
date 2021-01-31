@@ -50,7 +50,7 @@
     }
     to {
         transform: scale(.7);
-        opacity: .6;
+        opacity: 0;
     }
 }
 
@@ -60,7 +60,7 @@
     }
     to {
         transform: scale(.4);
-        opacity: .2;
+        opacity: 0;
     }
 }
 
@@ -75,13 +75,13 @@
     }
     100% {
         transform: scale(1);
-        opacity: .7;
+        opacity: 0;
     }
 }
 
 .expand {
     animation: cursorAnim3 .5s forwards;
-    border: 1px solid white;
+    border: 1px solid red;
 }
 
 // p {

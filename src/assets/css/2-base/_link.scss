@@ -1,3 +1,14 @@
+a {
+	position: relative;
+	line-height: 16px;
+	font-size: .9em;
+	text-decoration: none;
+	color: color('primary');
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
 .link {
 	a {
 		position: relative;

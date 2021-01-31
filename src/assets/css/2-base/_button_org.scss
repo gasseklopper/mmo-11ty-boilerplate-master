@@ -1,40 +1,41 @@
-.button {
-  position: relative;
-  display: inline-block;
-  margin: 0 $gutter/4 $gutter/2 0;
-  padding: 0.8em $gutter 0.9em;
-  line-height: 1;
-  text-align: center;
-  white-space: nowrap;
-  cursor: pointer;
-  user-select: none;
-  transition: transform $duration $timing, box-shadow $duration $timing;
-  border: 0;
-  border-radius: $radiusSmall;
-  vertical-align: middle;
+// .button {
+//   position: relative;
+//   display: inline-block;
+//   margin: 0 $gutter/4 $gutter/2 0;
+//   padding: 0.8em $gutter 0.9em;
+//   line-height: 1;
+//   text-align: center;
+//   white-space: nowrap;
+//   cursor: pointer;
+//   user-select: none;
+//   transition: transform $duration $timing, box-shadow $duration $timing;
+//   border: 0;
+//   border-radius: $radiusSmall;
+//   vertical-align: middle;
 
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: $shadowSmall;
-  }
 
-  &:active {
-    transition: none;
-    transform: translateY(-1px);
-  }
+//   &:hover {
+//     transform: translateY(-2px);
+//     box-shadow: $shadowSmall;
+//   }
 
-  &--main {
-    background: gradient("shine"), gradient(color("primary"));
-    color: color("dark-color");
-  }
+//   &:active {
+//     transition: none;
+//     transform: translateY(-1px);
+//   }
 
-  &--light {
-    background: gradient("shine"), gradient(color("light-color"));
-    color: color("dark-color");
-  }
+//   &--main {
+//     background: gradient("shine"), gradient(color("primary"));
+//     color: color("dark-color");
+//   }
 
-  &--dark {
-    background: gradient("shine"), gradient(color("dark-color"));
-    color: color("dark-color");
-  }
-}
+//   &--light {
+//     background: gradient("shine"), gradient(color("light-color"));
+//     color: color("dark-color");
+//   }
+
+//   &--dark {
+//     background: gradient("shine"), gradient(color("dark-color"));
+//     color: color("dark-color");
+//   }
+// }
