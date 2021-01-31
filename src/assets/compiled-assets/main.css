@@ -2587,6 +2587,39 @@ a:focus {
   background-color: purple;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main_content {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+::-moz-selection {
+  color: black;
+  background-color: yellow;
+}
+
+::selection {
+  color: black;
+  background-color: yellow;
+}
+
+p::-moz-selection {
+  color: black;
+  background-color: white;
+}
+
+p::selection {
+  color: black;
+  background-color: white;
+}
+
 .locomotive-images {
   background: #000;
 }

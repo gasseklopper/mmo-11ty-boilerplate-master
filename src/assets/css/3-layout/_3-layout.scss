@@ -10,3 +10,23 @@
 @import "core_navigation";
 @import "core_footer-dark";
 @import "nav_image_hover";
+body {
+	display: flex;
+	flex-direction: column;
+  }
+.main_content {
+	flex: 1 0 auto;
+}
+
+footer {
+	flex-shrink: 0;
+  }
+
+::selection {
+	  color: black;
+	  background-color: yellow
+	 }
+p::selection {
+	  color: black;
+	  background-color: white;
+	 }
