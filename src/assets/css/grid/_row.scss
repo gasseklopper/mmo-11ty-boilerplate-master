@@ -10,6 +10,14 @@
 	max-width: $basicGrid__width;
 	max-width: var(--basicGrid-width, $basicGrid__width);
 
+	&--spacing {
+		margin-bottom: -$gutter;
+	}
+
+	&--spacing > .column {
+		margin-bottom: $gutter;
+	}
+
 	@each $sizeName, $size in $basicGrid__sizes {
 		@media (min-width: $size) {
 			@include rowClasses($sizeName);
@@ -37,5 +45,4 @@
 			}
 		}
 	}
-
 }
