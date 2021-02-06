@@ -3,6 +3,7 @@
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	grid-template-columns: 40% 60%;
+	mix-blend-mode: multiply;
 
 	.pinned-quote {
 	  //   background-color: red;

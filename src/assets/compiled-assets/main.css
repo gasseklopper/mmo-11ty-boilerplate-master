@@ -1877,10 +1877,14 @@ a:hover {
   font-size: 3vw;
 }
 
+.teaser_img_mask_sticky {
+  color: #00d6d6;
+}
 .teaser_img_mask_sticky .c-fixed_wrapper {
   position: relative;
   overflow: hidden;
   background-color: beige;
+  mix-blend-mode: multiply;
   height: 100vh;
 }
 .teaser_img_mask_sticky .c-fixed_target {
@@ -1899,7 +1903,6 @@ a:hover {
   background-size: cover;
   background-position: center center;
   opacity: 0.75;
-  mix-blend-mode: multiply;
 }
 html:not(.has-scroll-smooth) .teaser_img_mask_sticky .c-fixed {
   top: 0;
@@ -1919,6 +1922,7 @@ html:not(.has-scroll-smooth) .teaser_img_mask_sticky .c-fixed {
   background-position-x: 50%;
   background-position-y: 90%;
   background-size: 100%;
+  mix-blend-mode: multiply;
 }
 .teaser_img_mask_zoom .image-mask img {
   height: 100%;
@@ -1931,6 +1935,7 @@ html:not(.has-scroll-smooth) .teaser_img_mask_sticky .c-fixed {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-columns: 40% 60%;
+  mix-blend-mode: multiply;
 }
 .teaser_img_gallery .pinned-quote {
   padding-top: 300px;
@@ -1958,6 +1963,7 @@ html:not(.has-scroll-smooth) .teaser_img_mask_sticky .c-fixed {
 }
 
 .section_lerp .lerp {
+  color: #00d6d6;
   margin-bottom: 300px;
 }
 .section_lerp .lerp__block-infos {
@@ -2042,6 +2048,7 @@ html:not(.has-scroll-smooth) .teaser_img_mask_sticky .c-fixed {
 }
 
 .template_footer {
+  color: #00d6d6;
   height: 100vh;
   display: grid;
   grid-template-columns: 40% 60%;
@@ -2052,6 +2059,8 @@ html:not(.has-scroll-smooth) .teaser_img_mask_sticky .c-fixed {
   width: 100%;
 }
 .template_footer .image-wrapper img {
+  background-color: #002a32;
+  mix-blend-mode: multiply;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -3183,7 +3192,9 @@ hr.lines:before {
   padding: 3.6rem 1.8rem 2.7rem;
   margin: 0 0 0.9rem;
   width: 100%;
-  background: grey;
+  background: #001d23;
+  color: #fff;
+  transition: box-shadow, transform 0.3s ease 0s;
 }
 @media (max-width: 960px) {
   .box_basic {
@@ -3193,6 +3204,11 @@ hr.lines:before {
 .box_basic__foot {
   margin-top: auto;
   padding: 1.8rem 0 0;
+}
+.box_basic:hover {
+  box-shadow: 2px 2px 15px 0 #001d23;
+  transform: translate(20px, 10px);
+  transition: box-shadow, transform 0.5s ease 0s;
 }
 
 .headroom {

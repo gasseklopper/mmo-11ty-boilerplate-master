@@ -1,10 +1,10 @@
 .teaser_img_mask_sticky {
-
+	color: color("primary");
 	.c-fixed_wrapper {
 		position: relative;
 		overflow: hidden;
 		background-color: beige;
-
+		mix-blend-mode: multiply;
 		height: 100vh;
 
 	}
@@ -26,7 +26,7 @@
 		background-size: cover;
 		background-position: center center;
 		opacity: 0.75;
-		mix-blend-mode: multiply;
+
 
 		html:not(.has-scroll-smooth) & {
 			top: 0;

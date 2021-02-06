@@ -1,4 +1,5 @@
 .template_footer {
+	color: color("primary");
 	height: 100vh;
 	display: grid;
 	grid-template-columns: 40% 60%;
@@ -10,9 +11,11 @@
 	  width: 100%;
 
 	  img {
-		  height: 100%;
-		  width: 100%;
-		  object-fit: cover;
+		background-color: color("secondary");
+		mix-blend-mode: multiply;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
 	  }
 	}
 
