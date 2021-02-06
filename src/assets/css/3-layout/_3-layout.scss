@@ -10,6 +10,7 @@
 @import "core_navigation";
 @import "core_footer-dark";
 @import "nav_image_hover";
+
 body {
 	display: flex;
 	flex-direction: column;
@@ -23,10 +24,11 @@ footer {
   }
 
 ::selection {
-	  color: black;
-	  background-color: yellow
-	 }
+  color: color("primary");
+  background-color: color("secondary");
+ }
+
 p::selection {
-	  color: black;
-	  background-color: white;
-	 }
+	color: color("primary");
+	background-color: color("secondary");
+ }

@@ -9,16 +9,16 @@ $version: "0.0.1";
 // Colors ------------------------------------------------------------------------------------ //
 
 // Core colors
-$primary: #444645 !default;
+$primary: #00d6d6 !default;
 $primary-dark: darken($primary, 3%) !default;
 $primary-light: lighten($primary, 13%) !default;
-$secondary: lighten($primary, 37.5%) !default;
+$secondary: #002a32 !default;
 $secondary-dark: darken($secondary, 3%) !default;
 $secondary-light: lighten($secondary, 3%) !default;
-$tertiary: #d9d9d8 !default;
+$tertiary: #dfec24 !default;
 $tertiary-dark: darken($tertiary, 30%) !default;
 $tertiary-light: lighten($tertiary, 30%) !default;
-$quaternary: #e80000 !default;
+$quaternary: #ee1a41 !default;
 $quaternary-dark: darken($quaternary, 30%) !default;
 $quaternary-light: lighten($quaternary, 30%) !default;
 
@@ -34,7 +34,7 @@ $border-color: lighten($dark-color, 60%) !default;
 $border-color-dark: darken($border-color, 10%) !default;
 
 // Background colors
-$bg-color: lighten($dark-color, 66%) !default;
+$bg-color: #fff !default;
 $bg-color-dark: darken($bg-color, 3%) !default;
 $bg-color-light: $light-color !default;
 
@@ -52,7 +52,7 @@ $link-color-light: lighten($link-color, 10%) !default;
 $code-color: #d73e48 !default;
 $highlight-color: #ffe9b3 !default;
 $body-bg: $bg-color-light !default;
-$body-font-color: lighten($dark-color, 5%) !default;
+$body-font-color: #002a32 !default;
 
 $colors: (
   "primary": $primary,

@@ -7,6 +7,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-top: -4em;
   }
 
   .project-image {
@@ -27,17 +28,18 @@
 	transform: translate(-50%, -50%);
 	z-index: 10;
 	overflow: hidden;
+	mix-blend-mode: multiply;
   }
 
   .image-container > img {
 	// height: 100%;
 	object-fit: cover;
+	mix-blend-mode: multiply;
   }
 
   .project-content {
-	//   background-color: blue;
+	color: color("primary");
 	width: 80%;
-	color: #fff;
 	position: absolute;
 	display: grid;
 	// margin: 0px 10vw;
@@ -54,6 +56,11 @@
 	font-size: 5rem;
 	font-weight: lighter;
 	display: flex;
+	animation: glow 1s ease-in-out infinite alternate;
+  }
+
+  .project--heading--span {
+	background-color: color("secondary");
   }
 
   .project--number {
@@ -65,4 +72,13 @@
 	  padding-left: 400px;
 	word-break: word-break;
 	text-align: left;
+  }
+
+ @keyframes glow {
+	from {
+	  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px color("primary"), 0 0 40px color("light-color"), 0 0 50px color("light-color"), 0 0 60px color("light-color"), 0 0 70px color("light-color");
+	}
+	to {
+	  text-shadow: 0 0 20px #fff, 0 0 30px color("primary"), 0 0 40px color("primary"), 0 0 50px color("primary"), 0 0 60px color("primary"), 0 0 70px color("primary"), 0 0 80px color("primary");
+	}
   }

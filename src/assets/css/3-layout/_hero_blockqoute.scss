@@ -4,16 +4,18 @@
 	height: 100vh;
 	padding-top: 10%;
 
+
 	&__rte {
 		// display: grid;
 		// align-content: center;
 		// padding: 0 1rem;
 		// height: 100%;
+		color: color("primary");
 
 		blockquote {
+
 			font-size: 4vmin;
 			font-weight: 300;
-			color: lightgray;
 
 			span {
 				background-color: red;
@@ -25,6 +27,7 @@
 			}
 
 			cite {
+				color: color("light-color");
 				font-weight: 300;
 				font-style: italic;
 				font-size: 7.5vmin;
@@ -34,14 +37,19 @@
 		}
 	}
 
-	// &__image-wrapper {
-	// 	height: 100vh;
-	// 	width: 100%;
+	&__image-wrapper {
+		// height: 100vh;
+		// width: 100%;
 
-	// 	img {
-	// 		height: 100%;
-	// 		width: 100%;
-	// 		object-fit: cover;
-	// 	}
-	// }
+		img {
+			// height: 100%;
+			// width: 100%;
+			// object-fit: cover;
+
+			mix-blend-mode: multiply;
+			@media (max-width: $bpS) {
+				display: none;
+			}
+		}
+	}
 }
