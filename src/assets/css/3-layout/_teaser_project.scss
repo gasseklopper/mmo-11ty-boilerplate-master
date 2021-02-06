@@ -61,6 +61,8 @@
 
   .project--heading--span {
 	background-color: color("secondary");
+	mix-blend-mode: multiply;
+	opacity: .7;
   }
 
   .project--number {

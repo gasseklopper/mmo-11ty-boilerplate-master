@@ -1553,6 +1553,13 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  margin-bottom: 0.9rem;
+  max-width: 100%;
+  height: auto;
+}
+
 table {
   margin: 0 0 0.9rem;
   width: 100%;
@@ -1856,11 +1863,6 @@ a:hover {
 }
 .hero_blockqoute__image-wrapper img {
   mix-blend-mode: multiply;
-}
-@media (max-width: 960px) {
-  .hero_blockqoute__image-wrapper img {
-    display: none;
-  }
 }
 
 .teaser_text_horizontal {
@@ -2186,6 +2188,8 @@ html:not(.has-scroll-smooth) .teaser_img_mask_sticky .c-fixed {
 
 .project--heading--span {
   background-color: #002a32;
+  mix-blend-mode: multiply;
+  opacity: 0.7;
 }
 
 .project--number {
