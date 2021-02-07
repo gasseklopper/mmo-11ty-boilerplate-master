@@ -1461,7 +1461,6 @@ html {
 @media (max-width: 960px) {
   html {
     --basicGrid-outer: 0px;
-    font-size: 87.5%;
   }
 }
 
