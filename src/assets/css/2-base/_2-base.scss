@@ -16,3 +16,13 @@
 @import "href";
 @import "rte";
 @import "main_content";
+
+.first-letter {
+    float: left;
+    font-size: 50px;
+    line-height: 24px;
+    margin: 0 20px 0 0;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 600;
+}
